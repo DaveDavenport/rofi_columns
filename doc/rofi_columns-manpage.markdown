@@ -58,7 +58,7 @@ it involves UTF-8 characters. Also when **-e** is passed it does not count escap
 
 Give nicely structured and markupped list of manpages in rofi.
 
-```man -s3,4 -k . | ./rofi_columns  -s "^([\S]+)\s\((\w+)\)\s+- (.*)$"  -m -f "<i>{2:4}</i>i> <b>{1:15}</b>b> {3:-1}" -e  | rofi -dmenu -markup-rows```
+```man -s3,4 -k . | ./rofi_columns  -s "^([\S]+)\s\((\w+)\)\s+- (.*)$"  -m -f "<i>{2:4}</i> <b>{1:15}</b> {3:-1}" -e  | rofi -dmenu -markup-rows```
 
 
 ## LICENSE
