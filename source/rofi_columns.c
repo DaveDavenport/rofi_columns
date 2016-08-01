@@ -206,7 +206,7 @@ static void output_simple ( FILE *io, gboolean escape  )
             }
         }
         if ( ( row + 1 ) < internal_store.n_rows ) {
-            putchar ( '\n' );
+            fputc ( '\n', io );
         }
     }
 }
@@ -305,6 +305,7 @@ static void output_advanced (  FILE *io, gboolean escape, const char *format )
         struct FormatArg arg  = { .row = row, .escape = escape, };
         char             *res = g_regex_replace_eval ( r, format, -1, 0, 0, helper_eval_cb, &arg, NULL );
         fputs ( res, io );
+        fputc ( '\n', io );
         g_free ( res );
     }
     g_regex_unref ( r );
