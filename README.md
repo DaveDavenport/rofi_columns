@@ -1,0 +1,1 @@
+doc/rofi_columns-manpage.markdown
